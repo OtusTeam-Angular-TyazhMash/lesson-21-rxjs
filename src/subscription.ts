@@ -1,4 +1,5 @@
-
+//@ts-ignore
+global.XMLHttpRequest = require('xhr2');
 import { Subject } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
@@ -11,4 +12,4 @@ const subscription = request$.subscribe(data => console.log(data));
 
 cancel$.subscribe(() => subscription.unsubscribe());
 
-setTimeout(() => cancel$.next(), 5000);
+setTimeout(() => cancel$.next(), 4000);

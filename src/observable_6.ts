@@ -1,4 +1,6 @@
 //@ts-ignore
+import {filter} from "rxjs";
+
 global.XMLHttpRequest = require('xhr2');
 
 import { ajax } from 'rxjs/ajax';

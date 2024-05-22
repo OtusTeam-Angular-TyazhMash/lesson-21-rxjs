@@ -1,4 +1,4 @@
-import { timer } from 'rxjs';
+import { timer} from 'rxjs';
 
 const timer$ = timer(2000);
 

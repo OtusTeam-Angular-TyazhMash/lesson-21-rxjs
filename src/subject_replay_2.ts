@@ -1,6 +1,6 @@
 import { ReplaySubject } from 'rxjs';
 
-const subject = new ReplaySubject<number>(2, 500);
+const subject = new ReplaySubject<number>(2, 300);
 
 subject.subscribe({
     next: value => console.log(`observerA: ${value}`)
@@ -8,7 +8,10 @@ subject.subscribe({
 
 subject.next(1);
 subject.next(2);
-subject.next(3);
+
+setTimeout(() => {
+    subject.next(3);
+}, 400)
 
 setTimeout(() => {
     subject.subscribe({
@@ -18,4 +21,4 @@ setTimeout(() => {
 
 setTimeout(() => {
     subject.next(4);
-}, 550)
+}, 500)

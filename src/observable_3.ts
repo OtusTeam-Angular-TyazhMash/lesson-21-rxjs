@@ -4,6 +4,7 @@ const numbers$ = new Observable(subscriber => {
     let item = 1
     setInterval(() => {
         subscriber.next(item++)
+        console.log(`next ${item}`)
     }, 1000)
 
 });

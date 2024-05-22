@@ -9,3 +9,8 @@ const numbers$ = new Observable(subscriber => {
 });
 
 numbers$.subscribe(number => console.log(number));
+numbers$.subscribe(
+    {
+        next: number => console.log(number),
+        complete: () => console.log('completed')
+    });

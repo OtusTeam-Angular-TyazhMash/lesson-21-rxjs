@@ -9,6 +9,5 @@ const childSubscription = observable2.subscribe(x => console.log('second: ' + x)
 subscription.add(childSubscription);
 
 setTimeout(() => {
-    // Unsubscribes BOTH subscription and childSubscription
     subscription.unsubscribe();
 }, 1000);

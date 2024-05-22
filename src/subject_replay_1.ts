@@ -1,6 +1,6 @@
 import { ReplaySubject } from 'rxjs';
 
-const subject = new ReplaySubject<number>(2);
+const subject = new ReplaySubject<number>(1);
 
 subject.subscribe({
     next: value => console.log(`observerA: ${value}`)

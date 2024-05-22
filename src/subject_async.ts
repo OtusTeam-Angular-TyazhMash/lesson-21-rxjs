@@ -1,8 +1,9 @@
-import { AsyncSubject } from 'rxjs';
+import {AsyncSubject, tap} from 'rxjs';
 
 const subject = new AsyncSubject<number>();
 
-subject.subscribe({
+subject
+    .subscribe({
     next: value => console.log(`observerA: ${value}`)
 });
 
